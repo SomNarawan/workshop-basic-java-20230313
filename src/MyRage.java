@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyRage {
     private final String input;
 
@@ -16,6 +19,35 @@ public class MyRage {
             return firstNumber;
         }
         return firstNumber + 1;
+    }
+
+    public boolean checkEndWithInclude() {
+        return input.endsWith("]");
+    }
+
+    public int getSecondNumber() {
+        int secondNumber = Integer.parseInt(String.valueOf(input.charAt(3)));
+        if(checkEndWithInclude()){
+            return secondNumber;
+        }
+        return secondNumber - 1;
+    }
+
+    public String getResult() {
+        int firstNumber = getFistNumber();
+        int secondNumber = getSecondNumber();
+//        String result = "";
+        List<String> results = new ArrayList<>();
+        for (int i = firstNumber; i <= secondNumber ; i++) {
+//            result += i;
+//            if(i != secondNumber){
+//                result += ",";
+//            }
+            results.add(String.valueOf(i));
+        }
+
+//        return result;
+        return String.join(",", results);
     }
 
 //    public static void main(String[] args) {
