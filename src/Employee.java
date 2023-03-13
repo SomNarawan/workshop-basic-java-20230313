@@ -1,9 +1,10 @@
 public class Employee {
     // Properties or states
-    int id;
-    String fname;
-    String lname;
-    String pos;
+    private int id;
+    private String fname;
+    private String lname;
+    private Department dep;
+    private String pos;
 
     //Constructor
     public Employee() {
@@ -20,7 +21,7 @@ public class Employee {
     }
 
     // Behaviors or methods
-    String getFullName() {
+    public String getFullName() {
         return fname + " " + lname;
     }
 }
