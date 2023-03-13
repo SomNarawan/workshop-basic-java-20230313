@@ -73,4 +73,18 @@ class MyRageTest {
         String result = myRage.getResult();
         assertEquals("2,3,4,5" ,result);
     }
+
+    @Test
+    public void result03 () {
+        MyRage myRage = new MyRage("[1,5)");
+        String result = myRage.getResult();
+        assertEquals("1,2,3,4" ,result);
+    }
+
+    @Test
+    public void result04 () {
+        MyRage myRage = new MyRage("(1,5)");
+        String result = myRage.getResult();
+        assertEquals("2,3,4" ,result);
+    }
 }
