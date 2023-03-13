@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String[] args) {
+        String fname = args[0];
+        String lname = args[1];
+
         // default Constructor
         Employee test = new Employee();
 
@@ -7,7 +10,7 @@ public class Main {
         System.out.println(resultTest);
 
         // Constructor
-        Employee narawan = new Employee("Narawan", "Iamsaard");
+        Employee narawan = new Employee(fname, lname);
 
         String result = narawan.getFullName();
         System.out.println(result);
